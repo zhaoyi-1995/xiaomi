@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<!-- saved from url=(0047)file:///D:/phpStudy/WWW/web_myfile23/index.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	
+	<title>Document</title>
+	<style>
+		body{
+			height: 100%;
+		}
+		#welcomeBox{
+			display: none;
+		}
+		#loginBox{
+			display: none;
+		}
+	</style>
+</head>
+
+<body>
+	<div id="welcomeBox">
+		欢迎您：<span id="usernameSpan">222</span>
+	</div>
+	<div id="loginBox" style="display: block;">
+		请<a href="file:///D:/phpStudy/WWW/web_myfile23/login.html">登录</a>
+	</div>
+
+
+<script type="text/javascript" src="file:///D:/phpStudy/WWW/web_myfile23/js/cookieTools.js"></script>
+<script type="text/javascript">
+	
+	window.onload = function(){
+		let username = getCookieVlue('username');
+		if (username) {
+			$('welcomeBox').style.display = "block";
+			$('usernameSpan').innerHTML = username;
+		}else{
+			$('loginBox').style.display = "block";
+		}
+	}
+
+	function $(id) {
+		return document.getElementById(id);
+	}
+
+</script></body></html>

@@ -1,0 +1,13 @@
+@mixin pop_banner{
+    top: 0;
+    left: 222px;
+    width:806px;
+    height: 360px;
+    background: orange;
+}
+
+.bannerBox{
+    position: relative;
+    @include pop_banner;
+    left: 348px;
+}

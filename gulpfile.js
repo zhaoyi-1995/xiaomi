@@ -32,6 +32,12 @@ gulp.task('watchall',async ()=>{
 	gulp.watch('sass/*.scss',async ()=>{
 		gulp.src('sass/*.scss')
 		.pipe(sass())
+		.pipe(gulp.dest('xiaomi\\css'));
+	});
+	
+	gulp.watch('sass/*.scss',async ()=>{
+		gulp.src('sass/*.scss')
+		.pipe(sass())
 		.pipe(gulp.dest('D:\\phpStudy\\WWW\\xiaomiyoupin\\css'));
 	});
 	

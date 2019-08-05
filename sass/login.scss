@@ -1,0 +1,184 @@
+@mixin inputbox{
+    width: 324px;
+    height: 22px;
+    line-height: 22px;
+    padding: 13px 16px 13px 14px;
+    margin-bottom: 10px;
+    display: block;
+}
+@mixin othertype{
+    width: 30px;
+    height: 30px;
+    margin: 0 12px;
+    display: inline-block;
+    border-radius: 50%
+}
+@mixin typeBg{
+    display: block;
+    margin: 4px auto 0;
+    width: 18px;
+    height: 18px;
+    background: url(../img/types.png);
+}
+.loginSession{
+    width: 358px;
+    height: 350px;
+    margin: 40px auto 0;
+    #username{
+        @include inputbox;
+    }
+    #userpass{
+        @include inputbox;
+    }
+    #loginBtn{
+        background-color: #ff6700;
+        width: 100%;
+        height: 50px;
+        line-height: 50px;
+        display: block;
+        margin:20px 0 2px;
+        text-align: center;
+        font-size: 14px;
+        color: #fff;
+        cursor: pointer;
+        border: none;
+    }
+    .changeOther {
+        overflow: hidden;
+        .loginPhone{
+            color:#ff6700 ;
+            font-size:14px ;
+            float: left;
+        }
+        
+        span {
+            float: right;
+            b{
+                font-size: 12px;
+                font-weight: 100;
+            }
+            a{
+                font-size:14px ;
+                color: #757575;
+            }
+            a:hover{
+                color:#ff6700 ;
+            }
+        }
+        #othermeth{
+            padding-top: 50px;
+            text-align: center;
+            #otherMethTit{
+                border: 0;
+                border-top: 1px solid #b0b0b0;
+                padding-top: 10px;
+                #otherMethText{
+                    border: none;
+                    font-size: 14px;
+                    color: #b0b0b0;
+                    margin: 0 auto;
+                    text-align: center;
+                }
+            }
+            #types{
+                text-align: center;
+                .qq{
+                    @include othertype;
+                    background: #0288d1;
+                    i{
+                        @include typeBg;
+                        background-position: -19px 0;
+                    }
+                }
+                .weibo{
+                    @include othertype;
+                    background: #d32f2f;
+                    i{
+                        @include typeBg;
+                        background-position: -38px 0;
+                    }
+                }
+                .zhifubao{
+                    @include othertype;
+                    background: #0ae;
+                    i{
+                        @include typeBg;
+                        width: 26px;
+                        background-position: -57px 0;
+                    }
+                }
+                .weixin{
+                    @include othertype;
+                    background: #00d20d;
+                    i{
+                        @include typeBg;
+                        width: 24px;
+                        background-position: -83px 0;
+                    }
+                }
+            }
+        }
+    }
+}
+.erCode{
+    width: 68px;
+    height: 68px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    opacity: .3;
+    background: url(../img/sprite_login.gif) no-repeat ;
+}
+.erCode:hover{
+    cursor: pointer;
+}
+.erCodeBox{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: white;
+    display: none;
+    .closeBox{
+        background-color: #bdbdbd;
+        border-radius: 50%;
+        width: 30px;
+        height: 30px;
+        position: absolute;
+        right: 20px;
+        top: 20px;
+        text-align: center;
+        line-height: 30px;
+        font-size: 24px;
+        color: dimgrey;
+    }
+    .closeBox:hover{
+        cursor: pointer;
+    }
+    .erCodeBoxCenter{
+        width: 600px;
+        height: 400px;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        margin-top: -200px;
+        margin-left: -300px;
+        text-align: center;
+        .erCodeTit{
+            font-size: 30px;
+            color: #ff6700;
+            font-weight: normal;
+            padding-bottom: 10px;
+        }
+        .erCodeImgBox{
+            width: 270px;
+            height: 270px;
+            margin:50px auto 0 ;
+            img{
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+}

@@ -1,0 +1,64 @@
+body,p,ul,ol,dl,dd,h1,h2,h3,h4,h5,h6,hr,input,td,select,textarea{
+    margin:0;
+    padding: 0;
+}
+ul{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+body{
+    background: #f2f2f2;
+}
+
+.contentBox{
+    position: relative;
+    width: 794px;
+    margin: 40px auto 20px;
+    padding : 0 30px 20px;
+    background: white;
+    min-height: 620px;
+    .logoBox{
+        padding-top: 50px;
+        padding-bottom: 40px;
+    }
+    .logoBox img{
+        display: block;
+        margin: 0 auto;
+    }
+    .titleBox h2{
+        text-align: center;
+        font-weight: 100;
+        color: #333333;
+        font-size: 30px;
+    }
+}
+
+.selectUls{
+    text-align: center;
+    li{
+        display: inline-block;
+    
+        border-right:1px solid grey; 
+    }
+    a{
+        display: block;
+        padding: 0 10px;
+        font-size: 14px;
+        color: #333;
+    }
+}
+
+.footText{
+    padding: 10px;
+    text-align: center;
+    font-size: 16px;
+    color:#9d9d9d ;
+    line-height: 16px;
+    a{
+        font-size: 16px;
+        color:#9d9d9d ;
+    }
+}
+
